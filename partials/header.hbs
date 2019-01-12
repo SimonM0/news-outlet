@@ -1,3 +1,4 @@
+{{!--
 {{#if background}}
     <style type="text/css">
         .responsive-header-img {
@@ -32,10 +33,13 @@
             }
         }
     </style>
-    <header class="site-header outer responsive-header-img">
+    <header class="site-header outer responsive-header-img ">
 {{else}}
     <header class="site-header outer no-image">
 {{/if}}
+--}}
+{{!-- Uncomment the code above if you want to use the header image --}}
+<header class="site-header outer no-image">
     <div class="inner">
         <div class="site-header-content">
             <h1 class="site-title">
@@ -55,7 +59,7 @@
     <script>
         function updateDate() {
             var date = new Date();
-            var element = document.querySelector('.site-date')
+            var element = document.querySelector('.site-date');
             var dayNames = [
                 "Sunday", "Monday", "Tuesday",
                 "Wednesday", "Thursday", "Friday", "Saturday"

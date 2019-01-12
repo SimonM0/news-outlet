@@ -162,7 +162,8 @@ body {
 }
 
 .site-logo {
-    max-height: 150px;
+    max-height: 100px;
+    margin: 3rem 0;
 }
 
 .site-description {
@@ -327,8 +328,8 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
 .subscribe-button {
     display: block;
     padding: 4px 10px;
-    border: #fff 1px solid;
-    color: #fff;
+    border: var(--darkgrey) 1px solid;
+    color: var(--darkgrey);
     font-size: 1.2rem;
     line-height: 1em;
     border-radius: 10px;
@@ -746,6 +747,15 @@ make sure this only happens on large viewports / desktop-ish devices.
 
     .post-card-large .post-card-content-link {
         padding: 25px 0 0 0;
+    }
+
+    .site-logo {
+        max-height: 60px;
+        margin: 1rem 0;
+    }
+
+    .post-feed-title {
+        margin-left: 10px;
     }
 }
 
@@ -1334,7 +1344,6 @@ Usage (In Ghost editor):
     border: color(var(--whitegrey) l(+2%)) 1px solid;
     text-align: center;
     background: color(var(--whitegrey) l(+4%));
-    border-radius: 7px;
 }
 
 .subscribe-form-title {
@@ -1691,13 +1700,11 @@ Usage (In Ghost editor):
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    margin: 0 20px 40px;
+    margin: 0 20px 20px;
     padding: 25px;
     color: #fff;
     background: var(--darkgrey) center center;
     background-size: cover;
-    border-radius: 5px;
-    box-shadow: rgba(39, 44, 49, 0.06) 8px 14px 38px, rgba(39, 44, 49, 0.03) 1px 3px 8px;
 }
 
 .read-next-card:before {
