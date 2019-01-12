@@ -16,7 +16,7 @@ into the {body} of the default.hbs template --}}
         <div class="post-feed-container">
             <div class="post-feed">
                 {{!--#get "posts" filter="tags:tagname"--}}
-                    {{#foreach posts from="6" }}
+                    {{#foreach posts from="3" }}
                     {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
                         {{> "post-card"}}
                     {{/foreach}}
