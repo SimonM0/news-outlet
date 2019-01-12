@@ -1,0 +1,16 @@
+{{!-- The footer at the very bottom of the screen --}}
+<footer class="site-footer outer">
+    <div class="site-footer-content inner">
+        <section class="copyright"><a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}}</section>
+        <nav class="site-footer-nav">
+            <a href="{{@blog.url}}">Latest Posts</a>
+            {{#if @blog.facebook}}<a href="{{facebook_url @blog.facebook}}" target="_blank" rel="noopener">Facebook</a>{{/if}}
+            {{#if @blog.twitter}}<a href="{{twitter_url @blog.twitter}}" target="_blank" rel="noopener">Twitter</a>{{/if}}
+            {{#if @labs.subscribers}}
+                <a class="subscribe-button" href="#subscribe">Subscribe</a>
+            {{else}}
+                <a href="https://feedly.com/i/subscription/feed/{{@blog.url}}/rss/" target="_blank" rel="noopener">Feedly</a>
+            {{/if}}
+        </nav>
+    </div>
+</footer>

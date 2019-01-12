@@ -18,9 +18,9 @@ into the {body} of the default.hbs template --}}
 
         <div class="post-feed-container">
             <div class="post-feed">
-            {{#foreach posts from="1" }}
+            {{#foreach posts from="6" }}
 
-            {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
+                {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
                 {{> "post-card"}}
 
             {{/foreach}}

@@ -354,6 +354,10 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     fill: var(--darkgrey);
 }
 
+footer .rss-button svg {
+    fill: color(white a(0.7));
+}
+
 .site-date {
     color: var(--midgrey);
     letter-spacing: 1px;
@@ -398,6 +402,7 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     background: #fff center center;
     background-size: cover;
     transition: all 0.5s ease;
+    border-bottom: 1px solid var(--whitegrey);
 }
 
 .post-card:hover {
@@ -464,7 +469,11 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    padding: 0 25px 25px;
+    padding: 0 0 10px;
+}
+
+.post-date {
+    font-size: 12px;
 }
 
 .author-profile-image,
@@ -541,7 +550,7 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
 .static-avatar {
     display: block;
     overflow: hidden;
-    margin: 0 -5px;
+    margin: 0;
     width: 34px;
     height: 34px;
     border: #fff 2px solid;
@@ -624,7 +633,6 @@ make sure this only happens on large viewports / desktop-ish devices.
     .post-card-large .post-card-image-link {
         position: relative;
         flex: 1 1 auto;
-        border-radius: 5px 0 0 5px;
     }
 
     .post-card-large .post-card-image {
@@ -646,18 +654,26 @@ make sure this only happens on large viewports / desktop-ish devices.
         line-height: 1.55em;
     }
 
-    .post-card-large-stacked .post-card-content-link {
-        padding: 20px 0px 0;
-    }
-
     .post-card-large .post-card-meta {
-        padding: 0 40px 30px;
+        padding: 0 0 10px 20px;
     }
 
     /* Post card half width */
     .post-card-container {
         flex: 1;
         display: flex;
+    }
+
+    .post-card-large-stacked .post-card-content-link {
+        padding: 20px 0px 0;
+    }
+
+    .post-card-large-stacked .post-card-content {
+        flex: 0 1 170px;
+    }
+
+    .post-card-large-stacked .post-card-meta {
+        padding: 0 0 10px;
     }
 
     .post-feed-container {
@@ -673,8 +689,8 @@ make sure this only happens on large viewports / desktop-ish devices.
     }
 
     .post-card-stacked {
-        flex: 1 1 100px;
-        min-height: 100px;
+        flex: 1 1 120px;
+        min-height: 120px;
     }
 
     .post-card-stacked .post-card-image {
@@ -694,8 +710,18 @@ make sure this only happens on large viewports / desktop-ish devices.
     }
 
     .post-card-stacked .post-card-meta {
-        padding: 0 0 0 15px;
+        padding: 0 0 10px 15px;
     }
+}
+
+/* Styles for the image header*/
+.post-card-header-image {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 15px 15px 0;
+    background: color(var(--darkgrey) a(0.75));
+    color: var(--offwhite)
 }
 
 .home-template .site-header:after {
