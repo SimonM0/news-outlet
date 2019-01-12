@@ -14,10 +14,22 @@ into the {body} of the default.hbs template --}}
         </div>
 
         <div class="post-feed-container">
+            <h2 class="post-feed-title">
+                Latest News
+            </h2>
+            <div class="post-feed">
+                {{!--#get "posts" filter="tags:latest"--}}
+                {{#foreach posts from="3" }}
+                    {{> "post-card" }}
+                {{/foreach}}
+                {{!--/get--}}
+            </div>
+        </div>
+
+        <div class="post-feed-container">
             <div class="post-feed">
                 {{!--#get "posts" filter="tags:tagname"--}}
                     {{#foreach posts from="3" }}
-                    {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
                         {{> "post-card"}}
                     {{/foreach}}
                 {{!--/get--}}

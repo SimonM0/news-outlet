@@ -3,13 +3,6 @@
         <div class="site-nav-left">
             <img src="http://www.cutercounter.com/hit.php?id=gwefkdq&nd=9&style=27" border="0" alt="free counter"> {{!-- gvmnxkdq --}}
         </div>
-        {{^is "home"}}
-            {{#if @blog.logo}}
-                <a class="site-nav-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}" /></a>
-            {{else}}
-                <a class="site-nav-logo" href="{{@blog.url}}">{{@blog.title}}</a>
-            {{/if}}
-        {{/is}}
         {{#if @blog.navigation}}
             {{navigation}}
         {{/if}}

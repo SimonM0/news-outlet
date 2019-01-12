@@ -3,8 +3,8 @@
     <article class="post-card {{post_class}}{{!--
   --}}{{#unless feature_image}}{{!--
   --}} no-image{{!--
-  --}}{{else}}{{#is "home"}}{{!--
-  --}}{{#has index="0"}} post-card-large post-card-large-stacked post-card-column{{/has}}{{/is}}{{!--
+  --}}{{else}}{{!--
+  --}}{{#has index="0"}} post-card-large post-card-large-stacked post-card-column{{/has}}{{!--
   --}}{{#has index="1,2,3,4"}} post-card-stacked post-card-row{{/has}}{{!--
   --}}{{/unless}}{{!--
   --}}">
@@ -53,16 +53,14 @@
                 <ul class="author-list">
                     {{#foreach authors}}
                         <li class="author-list-item">
-                            <div class="author-name-tooltip">
-                                {{name}}
-                            </div>
                             {{#if profile_image}}
                                 <a href="{{url}}" class="static-avatar">
-                                    <img class="author-profile-image" src="{{img_url profile_image size="xs"}}" alt="{{name}}" />
+                                    <img class="author-profile-image" src="{{img_url profile_image size="xs"}}" alt="{{name}}" />{{name}}
                                 </a>
                             {{else}}
-                                <a href="{{url}}" class="static-avatar author-profile-image">{{> "icons/avatar"}}</a>
+                                <a href="{{url}}" class="static-avatar author-profile-image">{{> "icons/avatar"}}{{name}}</a>
                             {{/if}}
+
                         </li>
                     {{/foreach}}
                 </ul>

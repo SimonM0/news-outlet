@@ -134,7 +134,7 @@ body {
     z-index: 10;
     display: block;
     height: 80px;
-    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0));
+    background: rgba(0, 0, 0, 0);
 }
 
 .site-header.no-cover:before,
@@ -390,6 +390,13 @@ footer .rss-button svg {
     flex-wrap: wrap;
     margin: 0 -10px;
     padding: 20px 0 0;
+}
+
+.post-feed-title {
+    border-bottom: 2px solid var(--whitegrey);
+    padding: 10px 0;
+    margin: 20px 0;
+    font-size: 30px;
 }
 
 .post-card {
@@ -792,11 +799,56 @@ make sure this only happens on large viewports / desktop-ish devices.
     margin: 0 6px 1px;
 }
 
+.post-hero-image {
+    position: relative;
+    width: 100%;
+    height: 350px;
+}
+
+.post-hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 .post-full-image {
     margin: 0 -10vw -165px;
     background: var(--lightgrey) center center;
     border-radius: 5px;
     overflow: hidden;
+    position: relative;
+}
+
+.post-hero-image-title {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 1;
+}
+
+.post-hero-image-title .post-full-meta,
+.post-hero-image-title a,
+.post-hero-image-title .post-full-title,
+.post-hero-image-title .post-full-meta-date {
+    color: white;
+}
+
+.post-hero-image:before {
+    content: "";
+    width: 100%;
+    background: rgba(0,0,0,.2);
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    height: 100%;
+    transition: all 400ms;
+}
+
+
+.post-hero-image:hover:before {
+    background: rgba(0,0,0,.4);
 }
 
 .post-full-image img {
