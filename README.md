@@ -1,3 +1,9 @@
+![Version](https://img.shields.io/badge/version-v1.0.0-blue.svg)
+![CircleCI](https://img.shields.io/circleci/project/github/Fried-Chicken/news-outlet/master.svg)
+![Issues](https://img.shields.io/github/issues/Fried-Chicken/news-outlet.svg)
+![License](https://img.shields.io/github/license/Fried-Chicken/news-outlet.svg)
+![Stars](https://img.shields.io/github/stars/Fried-Chicken/news-outlet.svg)
+![Forks](https://img.shields.io/github/forks/Fried-Chicken/news-outlet.svg)
 # News Outlet
 This is a theme created to look like news outlets for [ghost](http://github.com/tryghost/ghost/) blogs. This is the latest development version of News Outlet. If you're just looking to download the latest release, head over to the [releases](https://github.com/Fried-Chicken/news-outlet/releases) page.
 
