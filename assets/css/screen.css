@@ -720,7 +720,7 @@ make sure this only happens on large viewports / desktop-ish devices.
     bottom: 0;
     width: 100%;
     padding: 15px 15px 0;
-    background: color(var(--darkgrey) a(0.75));
+    background: color(var(--darkgrey) a(0.35));
     color: var(--offwhite)
 }
 
@@ -2108,8 +2108,8 @@ Usage (In Ghost editor):
     width: 100%;
     font-size: 16px;
     font-weight: bold;
-    border-top: 2px solid var(--darkgrey);
-    border-bottom: 2px solid var(--darkgrey);
+    border-top: 4px solid var(--darkgrey);
+    border-bottom: 4px solid var(--darkgrey);
 }
 
 .site-nav-center .site-nav-logo {
