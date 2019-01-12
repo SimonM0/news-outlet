@@ -150,7 +150,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 2vw 4vw;
+    padding: 3vw 4vw;
     min-height: 200px;
     max-height: 450px;
     text-align: center;
@@ -201,17 +201,14 @@ body {
     font-size: 1.2rem;
 }
 
-.site-nav-left {
+.site-nav-center {
     display: flex;
     align-items: center;
     overflow-x: auto;
     overflow-y: hidden;
     -webkit-overflow-scrolling: touch;
-    margin-right: 10px;
-    padding-bottom: 80px;
     letter-spacing: 0.4px;
     white-space: nowrap;
-
     -ms-overflow-scrolling: touch;
 }
 
@@ -271,11 +268,18 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     opacity: 1;
 }
 
+.site-nav-left {
+    position: absolute;
+    left: 0;
+}
+
 .site-nav-right {
     flex-shrink: 0;
     display: flex;
     align-items: center;
     height: 40px;
+    position: absolute;
+    right: 0;
 }
 
 .social-links {
@@ -294,7 +298,7 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     align-items: center;
     margin: 0;
     padding: 10px;
-    color: #fff;
+    color: var(--darkgrey);
     opacity: 0.8;
 }
 
@@ -304,7 +308,7 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
 
 .social-link svg {
     height: 1.8rem;
-    fill: #fff;
+    fill: var(--darkgrey);
 }
 
 .social-link-fb svg {
@@ -350,7 +354,14 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
 .rss-button svg {
     margin-bottom: 1px;
     height: 2.1rem;
-    fill: #fff;
+    fill: var(--darkgrey);
+}
+
+.site-date {
+    color: var(--midgrey);
+    letter-spacing: 1px;
+    font-size: 11px;
+    margin: 1rem;
 }
 
 @media (max-width: 700px) {

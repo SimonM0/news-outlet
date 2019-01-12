@@ -45,7 +45,33 @@
                     {{@blog.title}}
                 {{/if}}
             </h1>
+            <h5 class="site-date">
+            </h5>
         </div>
         {{> "site-nav"}}
     </div>
+    <script>
+        function updateDate() {
+            var date = new Date();
+            var element = document.querySelector('.site-date')
+            var dayNames = [
+                "Sunday", "Monday", "Tuesday",
+                "Wednesday", "Thursday", "Friday", "Saturday"
+            ];
+            var monthNames = [
+                "January", "February", "March",
+                "April", "May", "June", "July",
+                "August", "September", "October",
+                "November", "December"
+            ];
+
+            var dayIndex = date.getDay();
+            var day = date.getDate();
+            var monthIndex = date.getMonth();
+            var year = date.getFullYear();
+
+            element.innerHTML = dayNames[dayIndex] + ' ' + monthNames[monthIndex] + ' ' + day + ' ' + year;
+        }
+        updateDate();
+    </script>
 </header>
