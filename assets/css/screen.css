@@ -409,7 +409,6 @@ footer .rss-button svg {
     background: #fff center center;
     background-size: cover;
     transition: all 0.5s ease;
-    border-bottom: 1px solid var(--whitegrey);
 }
 
 .post-card:hover {
@@ -476,7 +475,6 @@ footer .rss-button svg {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    padding: 0 0 10px;
 }
 
 .post-date {
@@ -657,7 +655,7 @@ make sure this only happens on large viewports / desktop-ish devices.
     }
 
     .post-card-large p {
-        font-size: 1.8rem;
+        font-size: 1.5rem;
         line-height: 1.55em;
     }
 
@@ -680,7 +678,7 @@ make sure this only happens on large viewports / desktop-ish devices.
     }
 
     .post-card-large-stacked .post-card-meta {
-        padding: 0 0 10px;
+        padding: 0;
     }
 
     .post-feed-container {
@@ -717,7 +715,7 @@ make sure this only happens on large viewports / desktop-ish devices.
     }
 
     .post-card-stacked .post-card-meta {
-        padding: 0 0 10px 15px;
+        padding: 0 0 0 15px;
     }
 }
 
@@ -742,7 +740,12 @@ make sure this only happens on large viewports / desktop-ish devices.
     }
 
     .post-card {
-        margin: 0 20px 5vw;
+        margin: 0 30px 5vw;
+        width: 100%;
+    }
+
+    .post-card-large .post-card-content-link {
+        padding: 25px 0 0 0;
     }
 }
 
@@ -837,7 +840,7 @@ make sure this only happens on large viewports / desktop-ish devices.
 .post-hero-image:before {
     content: "";
     width: 100%;
-    background: rgba(0,0,0,.2);
+    background: rgba(0, 0, 0, .2);
     position: absolute;
     left: 0;
     top: 0;
@@ -846,9 +849,8 @@ make sure this only happens on large viewports / desktop-ish devices.
     transition: all 400ms;
 }
 
-
 .post-hero-image:hover:before {
-    background: rgba(0,0,0,.4);
+    background: rgba(0, 0, 0, .4);
 }
 
 .post-full-image img {
@@ -885,6 +887,13 @@ make sure this only happens on large viewports / desktop-ish devices.
     background: #fff;
 }
 
+@media (min-width: 795px) {
+    .post-full-content {
+        border-left: 1px solid color(var(--whitegrey) a(0.7));
+        border-right: 1px solid color(var(--whitegrey) a(0.7));
+    }
+}
+
 @media (max-width: 1170px) {
     .post-full-content {
         padding: 5vw 7vw 0;
@@ -906,7 +915,7 @@ make sure this only happens on large viewports / desktop-ish devices.
     display: block;
     width: 20px;
     height: 200px;
-    background: rgba(39, 44, 49, 0.15);
+    /*background: rgba(39, 44, 49, 0.15);*/
     filter: blur(5px);
     transform: rotate(-5deg);
 }
@@ -920,7 +929,7 @@ make sure this only happens on large viewports / desktop-ish devices.
     display: block;
     width: 20px;
     height: 200px;
-    background: rgba(39, 44, 49, 0.15);
+    /*background: rgba(39, 44, 49, 0.15);*/
     filter: blur(5px);
     transform: rotate(5deg);
 }
@@ -1234,6 +1243,7 @@ Usage (In Ghost editor):
 
     .post-full-title {
         font-size: 2.9rem;
+        text-align: center;
     }
 
     .post-full-image {
@@ -1242,12 +1252,24 @@ Usage (In Ghost editor):
     }
 
     .post-full-content {
-        padding: 0;
+        padding: 0 10px;
     }
 
     .post-full-content:before,
     .post-full-content:after {
         display: none;
+    }
+
+    .post-hero-image {
+        margin-bottom: 15px;
+    }
+
+    .inner .post-full-footer {
+        margin: 0 10px;
+    }
+
+    .outer {
+        padding: 0;
     }
 }
 
@@ -1401,6 +1423,31 @@ Usage (In Ghost editor):
 
     .subscribe-form p {
         font-size: 1.6rem;
+    }
+
+    .post-card-container {
+        margin: 0 -10px
+    }
+
+    .post-card-container-left,
+    .post-card-container-right {
+        margin-right: 50px;
+        width: 100%;
+    }
+
+    .post-feed .post-card-container-right {
+        display: block;
+    }
+}
+
+@media (max-width: 795px) {
+    .post-card-container-left,
+    .post-card-container-right {
+        width: 100%;
+    }
+
+    .post-card-container-right {
+        display: flex;
     }
 }
 
@@ -2164,8 +2211,18 @@ Usage (In Ghost editor):
     border-bottom: 4px solid var(--darkgrey);
 }
 
-.site-nav-center .site-nav-logo {
-    margin-right: 0;
+.site-nav-center-logo {
+    height: 265px;
+    text-align: center;
+    border-bottom: 4px solid var(--darkgrey);
+}
+
+.site-nav-center-logo .site-nav-logo img {
+    min-height: 150px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
 }
 
 .error-message {
@@ -2177,7 +2234,8 @@ Usage (In Ghost editor):
     font-size: 12vw;
     line-height: 1em;
     letter-spacing: -5px;
-    opacity: 0.3;
+    opacity: .3;
+    font-weight: 100;
 }
 
 .error-description {

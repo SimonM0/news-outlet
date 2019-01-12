@@ -39,11 +39,13 @@
     <div class="inner">
         <div class="site-header-content">
             <h1 class="site-title">
+                <a href="/">
                 {{#if @blog.logo}}
                     <img class="site-logo" src="{{img_url @blog.logo size="s"}}" alt="{{@blog.title}}" />
                 {{else}}
                     {{@blog.title}}
                 {{/if}}
+                </a>
             </h1>
             <h5 class="site-date">
             </h5>
