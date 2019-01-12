@@ -4,10 +4,13 @@
   "demo": "",
   "version": "1.0.0",
   "engines": {
-    "ghost": ">=2.0.0"
+    "ghost": ">=2.0.0",
+    "ghost-api": "v2"
   },
   "main": "index.js",
   "scripts": {
+    "dev": "gulp",
+    "zip": "gulp zip",
     "test": "gscan ."
   },
   "repository": {
@@ -42,9 +45,6 @@
     "desktop": "assets/screenshot-desktop.jpg",
     "mobile": "assets/screenshot-mobile.jpg"
   },
-  "devDependencies": {
-    "gscan": "^2.0.0"
-  },
   "config": {
     "posts_per_page": 25,
     "image_sizes": {
@@ -67,5 +67,22 @@
         "width": 2000
       }
     }
+  },
+  "devDependencies": {
+    "autoprefixer": "6.3.6",
+    "cssnano": "3.7.1",
+    "gscan": "^2.0.0",
+    "gulp": "3.9.1",
+    "gulp-livereload": "3.8.1",
+    "gulp-postcss": "6.1.1",
+    "gulp-sourcemaps": "1.6.0",
+    "gulp-util": "3.0.7",
+    "gulp-watch": "4.3.8",
+    "gulp-zip": "4.0.0",
+    "postcss-color-function": "2.0.1",
+    "postcss-custom-properties": "5.0.1",
+    "postcss-easy-import": "1.0.1",
+    "gulp-filter": "5.1.0",
+    "gulp-uglify": "3.0.1"
   }
 }

@@ -1,0 +1,51 @@
+{{#if background}}
+    <style type="text/css">
+        .responsive-header-img {
+            background-image: url({{img_url background size='xl'}});
+        }
+
+        @media (max-width: 1000px) {
+            .responsive-header-img {
+                background-image: url({{img_url background size='l'}});
+                background-image: -webkit-image-set(
+                        url({{img_url background size='l'}}) 1x,
+                        url({{img_url background size='xl'}}) 2x
+                );
+                background-image: image-set(
+                        url({{img_url background size='l'}}) 1x,
+                        url({{img_url background size='xl'}}) 2x
+                );
+            }
+
+            @media (max-width: 600px) {
+                .responsive-header-img {
+                    background-image: url({{img_url background size='m'}});
+                    background-image: -webkit-image-set(
+                            url({{img_url background size='m'}}) 1x,
+                            url({{img_url background size='l'}}) 2x
+                    );
+                    background-image: image-set(
+                            url({{img_url background size='m'}}) 1x,
+                            url({{img_url background size='l'}}) 2x
+                    );
+                }
+            }
+        }
+    </style>
+    <header class="site-header outer responsive-header-img">
+{{else}}
+    <header class="site-header outer no-image">
+{{/if}}
+    <div class="inner">
+        <div class="site-header-content">
+            <h1 class="site-title">
+                {{#if @blog.logo}}
+                    <img class="site-logo" src="{{img_url @blog.logo size="s"}}" alt="{{@blog.title}}" />
+                {{else}}
+                    {{@blog.title}}
+                {{/if}}
+            </h1>
+        </div>
+        {{> "site-nav"}}
+    </div>
+</header>
