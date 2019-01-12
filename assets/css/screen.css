@@ -74,7 +74,7 @@ body {
 /* Centered content container blocks */
 .inner {
     margin: 0 auto;
-    max-width: 1040px;
+    max-width: 1200px;
     width: 100%;
 }
 
@@ -399,7 +399,6 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     min-height: 300px;
     background: #fff center center;
     background-size: cover;
-    border-radius: 5px;
     box-shadow: rgba(39,44,49,0.06) 8px 14px 38px, rgba(39, 44, 49, 0.03) 1px 3px 8px;
     transition: all 0.5s ease;
 }
@@ -414,7 +413,6 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     position: relative;
     display: block;
     overflow: hidden;
-    border-radius: 5px 5px 0 0;
 }
 
 .post-card-image {
@@ -645,6 +643,12 @@ make sure this only happens on large viewports / desktop-ish devices.
 
     .post-card-large .post-card-meta {
         padding: 0 40px 30px;
+    }
+
+    /* Post card half width */
+    .post-card-half-width {
+        flex: 1 1 50%;
+        flex-direction: column;
     }
 }
 

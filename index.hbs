@@ -8,9 +8,18 @@ into the {body} of the default.hbs template --}}
     <div class="inner">
 
         <div class="post-feed">
-            {{#foreach posts}}
+            {{#foreach posts from="0" to="5" }}
 
-                {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
+            {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
+            {{> "home-section"}}
+
+            {{/foreach}}
+        </div>
+
+        <div class="post-feed">
+            {{#foreach posts from="6" }}
+
+            {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
                 {{> "post-card"}}
 
             {{/foreach}}
