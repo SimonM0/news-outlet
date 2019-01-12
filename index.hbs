@@ -16,13 +16,15 @@ into the {body} of the default.hbs template --}}
             {{/foreach}}
         </div>
 
-        <div class="post-feed">
-            {{#foreach posts from="6" }}
+        <div class="post-feed-container">
+            <div class="post-feed">
+            {{#foreach posts from="1" }}
 
             {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
                 {{> "post-card"}}
 
             {{/foreach}}
+            </div>
         </div>
 
     </div>
