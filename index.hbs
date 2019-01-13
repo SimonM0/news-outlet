@@ -10,7 +10,7 @@ into the {body} of the default.hbs template --}}
             Latest News
         </h2>
         <div class="post-feed">
-            {{#foreach posts from="1" to="4" }}
+            {{#foreach posts from="1" to="5" }}
                 {{> "home-section"}}
             {{/foreach}}
         </div>
@@ -18,7 +18,7 @@ into the {body} of the default.hbs template --}}
         <div class="post-feed-container">
             <div class="post-feed">
                 {{!--#get "posts" filter="tags:latest"--}}
-                {{#foreach posts from="5" }}
+                {{#foreach posts from="6" }}
                     {{> "post-card" }}
                 {{/foreach}}
                 {{!--/get--}}
