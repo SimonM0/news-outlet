@@ -1,5 +1,5 @@
 (function () {
-        var apiUrl = '//fried-chicken.github.io/news-outlet//ghost/api/v0.1/',
+        var apiUrl = '//fried-chicken.github.io/news-outlet/ghost/api/v0.1/',
         clientId,
         clientSecret,
         url,

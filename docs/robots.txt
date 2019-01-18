@@ -1,4 +1,4 @@
 User-agent: *
-Sitemap: https://fried-chicken.github.io/news-outlet//sitemap.xml
+Sitemap: https://fried-chicken.github.io/news-outlet/sitemap.xml
 Disallow: /ghost/
 Disallow: /p/
