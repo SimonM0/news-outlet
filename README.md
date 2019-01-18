@@ -13,6 +13,9 @@ This is a theme created to look like news outlets for [ghost](http://github.com/
 
 &nbsp;
 
+# Demo Site
+Vist the demo site [here](https://fried-chicken.github.io/news-outlet/)
+
 # Templating
 Ghost uses [Handlebars](http://handlebarsjs.com/) for its themes.
 
