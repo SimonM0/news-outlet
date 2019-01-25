@@ -656,7 +656,7 @@ make sure this only happens on large viewports / desktop-ish devices.
     }
 
     .post-card-large p {
-        font-size: 1.5rem;
+        font-size: 1.65rem;
         line-height: 1.55em;
     }
 
@@ -680,6 +680,12 @@ make sure this only happens on large viewports / desktop-ish devices.
 
     .post-card-large-stacked .post-card-meta {
         padding: 0;
+    }
+
+    .post-card-large-stacked .post-card-tags {
+        color: white;
+        text-shadow: 0 0 7px black;
+        font-weight: bold;
     }
 
     .post-feed-container {
@@ -726,7 +732,7 @@ make sure this only happens on large viewports / desktop-ish devices.
     bottom: 0;
     width: 100%;
     padding: 15px 15px 0;
-    background: color(var(--darkgrey) a(0.35));
+    background: color(var(--darkgrey) a(0.6));
     color: var(--offwhite)
 }
 
@@ -814,13 +820,12 @@ make sure this only happens on large viewports / desktop-ish devices.
 
 .post-hero-image {
     position: relative;
-    width: 100%;
-    height: 350px;
+    margin: 0 -25vw -165px;
 }
 
 .post-hero-image img {
     width: 100%;
-    height: 100%;
+    height: 800px;
     object-fit: cover;
 }
 
@@ -836,7 +841,7 @@ make sure this only happens on large viewports / desktop-ish devices.
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-100%);
     z-index: 1;
 }
 
@@ -845,6 +850,7 @@ make sure this only happens on large viewports / desktop-ish devices.
 .post-hero-image-title .post-full-title,
 .post-hero-image-title .post-full-meta-date {
     color: white;
+    text-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
 .post-hero-image:before {
@@ -854,7 +860,7 @@ make sure this only happens on large viewports / desktop-ish devices.
     position: absolute;
     left: 0;
     top: 0;
-    z-index: 1;
+    z-index: 0;
     height: 100%;
     transition: all 400ms;
 }
@@ -870,19 +876,35 @@ make sure this only happens on large viewports / desktop-ish devices.
 }
 
 @media (max-width: 1170px) {
+    .post-hero-image,
     .post-full-image {
         margin: 0 -4vw -100px;
         border-radius: 0;
     }
 
+    .post-hero-image img,
     .post-full-image img {
         height: 600px;
+    }
+
+    .post-hero-image-title {
+        width: 77%;
+    }
+
+    .post-full-title {
+        font-size: 4rem;
     }
 }
 
 @media (max-width: 800px) {
+    .post-hero-image img,
     .post-full-image img {
         height: 400px;
+    }
+
+    .post-hero-image-title {
+        width: 77%;
+        font-size: 4rem;
     }
 }
 
@@ -898,9 +920,14 @@ make sure this only happens on large viewports / desktop-ish devices.
 }
 
 @media (min-width: 795px) {
+    .post-full-footer-container,
     .post-full-content {
         border-left: 1px solid color(var(--whitegrey) a(0.7));
         border-right: 1px solid color(var(--whitegrey) a(0.7));
+    }
+
+    .post-full-footer-container {
+        border-bottom: 1px solid color(var(--whitegrey) a(0.7));
     }
 }
 

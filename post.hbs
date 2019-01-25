@@ -51,19 +51,19 @@ into the {body} of the default.hbs template --}}
             </section>
             {{/if}}
 
-            <footer class="post-full-footer">
+            <footer class="post-full-footer-container">
+                <div class="post-full-footer">
+                    {{!-- There are two options for how we display the byline/author-info.
+                    If the post has more than one author, we load a specific template
+                    from includes/byline-multiple.hbs, otherwise, we just use the
+                    default byline. --}}
 
-                {{!-- There are two options for how we display the byline/author-info.
-                If the post has more than one author, we load a specific template
-                from includes/byline-multiple.hbs, otherwise, we just use the
-                default byline. --}}
-
-                {{#has author="count:>1"}}
-                    {{> "byline-multiple"}}
-                {{else}}
-                    {{> "byline-single"}}
-                {{/has}}
-
+                    {{#has author="count:>1"}}
+                        {{> "byline-multiple"}}
+                    {{else}}
+                        {{> "byline-single"}}
+                    {{/has}}
+                </div>
             </footer>
 
             {{!--
