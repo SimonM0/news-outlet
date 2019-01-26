@@ -407,8 +407,6 @@ footer .rss-button svg {
     overflow: hidden;
     margin: 0 10px 20px;
     min-height: 300px;
-    background: #fff center center;
-    background-size: cover;
     transition: all 0.5s ease;
 }
 
@@ -520,6 +518,10 @@ footer .rss-button svg {
 
 .author-name {
     margin-left: 10px;
+}
+
+.author-name a {
+    color: inherit;
 }
 
 .author-list-item:nth-child(1) {
