@@ -511,6 +511,15 @@ footer .rss-button svg {
     flex-shrink: 0;
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+}
+
+.author-name {
+    margin-left: 10px;
 }
 
 .author-list-item:nth-child(1) {
