@@ -487,7 +487,6 @@ footer .rss-button svg {
     height: 100%;
     background: color(var(--lightgrey) l(+10%));
     border-radius: 100%;
-
     object-fit: cover;
 }
 
@@ -1537,6 +1536,8 @@ Usage (In Ghost editor):
     margin-right: 15px;
     width: 60px;
     height: 60px;
+    min-width: 60px;
+    min-height: 60px;
 }
 
 .author-card-name {
