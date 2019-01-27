@@ -21,7 +21,7 @@ You'll notice that we *don't* use any Javascript, or ghost_head / ghost_foot in 
             <div class="inner">
                 <nav class="site-nav-center-logo">
                     {{#if @blog.logo}}
-                        <a class="site-nav-logo" href="{{@blog.url}}"><img src="{{img_url @blog.logo}}" alt="{{@blog.title}}" /></a>
+                        <a class="site-nav-logo" href="{{@blog.url}}"><img src="{{img_url @blog.logo  size="s"}}" alt="{{@blog.title}}" /></a>
                     {{else}}
                         <a class="site-nav-logo" href="{{@blog.url}}">{{@blog.title}}</a>
                     {{/if}}
