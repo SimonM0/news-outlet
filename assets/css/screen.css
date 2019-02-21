@@ -649,6 +649,7 @@ make sure this only happens on large viewports / desktop-ish devices.
     .post-card-large .post-card-image-link {
         position: relative;
         flex: 1 1 auto;
+        min-height: 400px;
     }
 
     .post-card-large .post-card-image {

@@ -16,25 +16,11 @@ into the {body} of the default.hbs template --}}
         </div>
 
         <div class="post-feed-container">
-            <div class="post-feed">
-                {{!--#get "posts" filter="tags:latest"--}}
+            <div class="post-feed post-feed-infinite-scroll">
                 {{#foreach posts from="6" }}
                     {{> "post-card" }}
                 {{/foreach}}
-                {{!--/get--}}
             </div>
         </div>
-
-        {{!--
-        <div class="post-feed-container">
-            <div class="post-feed">
-                {{#get "posts" filter="tags:tagname"}}
-                    {{#foreach posts from="3" }}
-                        {{> "post-card"}}
-                    {{/foreach}}
-                {{/get}}
-            </div>
-        </div>
-        --}}
     </div>
 </main>

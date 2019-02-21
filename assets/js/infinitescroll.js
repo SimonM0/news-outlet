@@ -8,7 +8,7 @@
     if (!nextElement) return;
 
     // post feed element
-    var feedElement = document.querySelector('.post-feed');
+    var feedElement = document.querySelector('.post-feed-infinite-scroll');
     if (!feedElement) return;
 
     var buffer = 300;
